@@ -9,9 +9,9 @@ int main()
     const std::string connectionString =
         "DRIVER={ODBC Driver 17 for SQL Server};"
         "SERVER=PR-BACHLITZANA;"
-        "DATABASE=FIDUCIAM_PROD;"
-        "UID=db2admin;"
-        "PWD=db2admin1;";
+        "DATABASE=database;"//your database 
+        "UID=admin;"//your username
+        "PWD=admin;";//your password
 
     try
     {
@@ -19,7 +19,7 @@ int main()
         soci::session sql(soci::odbc, connectionString);
         std::cout << "Successfully connected to MS SQL Server database!" << std::endl;
 
-        soci::rowset<soci::row> rs = (sql.prepare << "SELECT * FROM AUSR");
+        soci::rowset<soci::row> rs = (sql.prepare << "SELECT * FROM Table"); // your table
         for (const auto& r : rs)
         {
             for (std::size_t i = 0; i != r.size(); ++i)
