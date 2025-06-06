@@ -1,36 +1,43 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
+    <Filter Include="RabbitMq">
+      <UniqueIdentifier>{bc60a2bb-d0d6-4808-914a-6e1c4a17c0be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entities">
+      <UniqueIdentifier>{a921d6fe-9f81-48e9-9167-ad681529149c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="StatingPoint">
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    <Filter Include="Controller">
+      <UniqueIdentifier>{71a10d6d-caac-44d9-a936-b341414a808e}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="User.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>StatingPoint</Filter>
     </ClCompile>
     <ClCompile Include="RabbitMqConsumer.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>RabbitMq</Filter>
+    </ClCompile>
+    <ClCompile Include="User.cpp">
+      <Filter>Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="UserController.cpp">
+      <Filter>Controller</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="User.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="RabbitMqConsumer.h">
-      <Filter>Header Files</Filter>
+      <Filter>RabbitMq</Filter>
+    </ClInclude>
+    <ClInclude Include="User.h">
+      <Filter>Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="UserController.h">
+      <Filter>Controller</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
